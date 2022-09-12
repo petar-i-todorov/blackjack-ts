@@ -16,7 +16,7 @@ const BetOption: React.FC<{
       className={`bet-option ${state && "button-option-active"}`}
       onClick={() => {
         if (!playStatus) {
-          dispatch(setTextError("You cannot change your bet choice."));
+          dispatch(setTextError("Unavailable during game."));
           dispatch(showErrorModal(true));
         } else {
           dispatch(toUnlock());
