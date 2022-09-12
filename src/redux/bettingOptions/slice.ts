@@ -1,10 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-interface IBettingOptions {
-  fiftyStatus: boolean;
-  hundredStatus: boolean;
-  twoHundredFiftyStatus: boolean;
-}
+import IBettingOptions from "./types";
 
 const initialState: IBettingOptions = {
   fiftyStatus: true,

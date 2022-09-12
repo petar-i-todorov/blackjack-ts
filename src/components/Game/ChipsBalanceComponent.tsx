@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { showErrorModal } from "../../store/showModalsSlice";
-import { setTextError } from "../../store/textErrorSlice";
+import { showErrorModal } from "../../redux/modals/slice";
+import { setTextError } from "../../redux/errorText/slice";
 
 const ChipsBalanceComponent = () => {
   const chipsBalance = useAppSelector((state) => state.chipsBalance);

@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
-import { showErrorModal } from "../../../store/showModalsSlice";
+import { showErrorModal } from "../../../redux/modals/slice";
 
 const ErrorModal = () => {
   const dispatch = useAppDispatch();

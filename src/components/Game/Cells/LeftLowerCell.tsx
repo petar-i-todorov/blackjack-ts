@@ -1,4 +1,5 @@
 import React from "react";
+import { ICard } from "../../../classes/CardClass";
 import { useAppSelector } from "../../../hooks/reduxHooks";
 import CardComponent from "../CardComponent";
 
@@ -8,7 +9,7 @@ const LeftLowerCell = () => {
   return (
     <div className="cell">
       {leftLowerCards &&
-        leftLowerCards?.map((card, index) => (
+        leftLowerCards?.map((card: ICard, index: number) => (
           <CardComponent key={index} className="stacking" card={card} />
         ))}
     </div>

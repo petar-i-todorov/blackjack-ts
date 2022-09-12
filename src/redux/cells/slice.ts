@@ -1,12 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ICard } from "../classes/CardClass";
-
-interface ICellCards {
-  leftLowerCards: null | ICard[];
-  leftUpperCards: null | ICard[];
-  rightLowerCard: null | ICard;
-  rightUpperCard: null | ICard;
-}
+import { ICard } from "../../classes/CardClass";
+import ICellCards from "./types";
 
 const initialState: ICellCards = {
   leftLowerCards: [],

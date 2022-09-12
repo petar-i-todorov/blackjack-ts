@@ -1,12 +1,12 @@
 import React from "react";
 import { ICard } from "../../../classes/CardClass";
 import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
-import { addLeftUpperCard } from "../../../store/cellsSlice";
-import { CounterAction } from "../../../store/countersSlice";
-import { setDeck } from "../../../store/deckSlice";
-import { setResult } from "../../../store/resultSlice";
-import { showErrorModal } from "../../../store/showModalsSlice";
-import { setTextError } from "../../../store/textErrorSlice";
+import { addLeftUpperCard } from "../../../redux/cells/slice";
+import { CounterAction } from "../../../redux/counters/slice";
+import { setDeck } from "../../../redux/deck/slice";
+import { setResult } from "../../../redux/result/slice";
+import { showErrorModal } from "../../../redux/modals/slice";
+import { setTextError } from "../../../redux/errorText/slice";
 
 const EnoughButton: React.FC<{
   setShowResultModal: (arg: boolean) => void;
@@ -80,7 +80,9 @@ const EnoughButton: React.FC<{
         while (counterUpperRef < 17) {
           counterUpperRef = 0;
           leftUpperCardRandom = drawRandomCard(deckRef);
-          deckRef = deckRef.filter((card) => card !== leftUpperCardRandom);
+          deckRef = deckRef.filter(
+            (card: ICard) => card !== leftUpperCardRandom
+          );
           dispatch(addLeftUpperCard(leftUpperCardRandom));
           setCounterUpperRef([
             rightUpperCardRef,

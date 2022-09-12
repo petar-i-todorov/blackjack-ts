@@ -5,16 +5,16 @@ import {
   generateRightUpperCard,
   resetLeftLowerCards,
   resetLeftUpperCards,
-} from "../../../store/cellsSlice";
+} from "../../../redux/cells/slice";
 import {
   lockDrawMore,
   lockEnough,
   unlockPlay,
-} from "../../../store/unlockButtons";
-import { setChipsBalance } from "../../../store/chipsBalanceSlice";
-import { setDeck } from "../../../store/deckSlice";
+} from "../../../redux/buttons/slice";
+import { setChipsBalance } from "../../../redux/chipsBalance/slice";
+import { setDeck } from "../../../redux/deck/slice";
 import freshDeck from "../../../utils/deck";
-import { setPossibleBlackjack } from "../../../store/possibleBlackjackSlice";
+import { setPossibleBlackjack } from "../../../redux/possibleBlackjack/slice";
 
 const ResultModal: React.FC<{
   showResultModal: boolean;

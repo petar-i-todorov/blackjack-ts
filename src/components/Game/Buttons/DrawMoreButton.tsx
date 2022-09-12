@@ -1,10 +1,11 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
-import { addLeftLowerCard } from "../../../store/cellsSlice";
-import { setCounterLower } from "../../../store/countersSlice";
-import { setDeck } from "../../../store/deckSlice";
-import { showErrorModal } from "../../../store/showModalsSlice";
-import { setTextError } from "../../../store/textErrorSlice";
+import { addLeftLowerCard } from "../../../redux/cells/slice";
+import { setCounterLower } from "../../../redux/counters/slice";
+import { setDeck } from "../../../redux/deck/slice";
+import { showErrorModal } from "../../../redux/modals/slice";
+import { setTextError } from "../../../redux/errorText/slice";
+import { ICard } from "../../../classes/CardClass";
 
 const DrawMoreButton = () => {
   const dispatch = useAppDispatch();
@@ -26,7 +27,7 @@ const DrawMoreButton = () => {
     const randomCard = deck[randomIndex];
     dispatch(
       setDeck(
-        deck.filter((el) => {
+        deck.filter((el: ICard) => {
           return el !== randomCard;
         })
       )

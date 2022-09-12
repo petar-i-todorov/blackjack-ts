@@ -1,4 +1,4 @@
-import { setDeck } from "../store/deckSlice";
+import { setDeck } from "../redux/deck/slice";
 import { useAppDispatch, useAppSelector } from "./reduxHooks";
 
 export const useRandomCard = () => {

@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cellsReducer from "./cellsSlice";
-import showModalsReducer from "./showModalsSlice";
-import resultReducer from "./resultSlice";
-import counterReducer from "./countersSlice";
-import unlockButtonsReducer from "./unlockButtons";
-import textErrorReducer from "./textErrorSlice";
-import showUpperLeftReducer from "./showUpperLeftSlice";
-import deckReducer from "./deckSlice";
-import chipsBalanceReducer from "./chipsBalanceSlice";
-import bettingOptionsReducer from "./bettingOptionsSlice";
-import possibleBlackjackReducer from "./possibleBlackjackSlice";
+import cellsReducer from "./cells/slice";
+import showModalsReducer from "./modals/slice";
+import resultReducer from "./result/slice";
+import counterReducer from "./counters/slice";
+import unlockButtonsReducer from "./buttons/slice";
+import textErrorReducer from "./errorText/slice";
+import showUpperLeftReducer from "./upperLeftStatus/slice";
+import deckReducer from "./deck/slice";
+import chipsBalanceReducer from "./chipsBalance/slice";
+import bettingOptionsReducer from "./bettingOptions/slice";
+import possibleBlackjackReducer from "./possibleBlackjack/slice";
 
 export const store = configureStore({
   reducer: {

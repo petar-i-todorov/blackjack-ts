@@ -4,21 +4,23 @@ import {
   addLeftLowerCard,
   generateRightLowerCard,
   generateRightUpperCard,
-} from "../../../store/cellsSlice";
+} from "../../../redux/cells/slice";
 import { useEffect } from "react";
 import { ICard } from "../../../classes/CardClass";
-import { setCounterLower, setCounterUpper } from "../../../store/countersSlice";
+import {
+  setCounterLower,
+  setCounterUpper,
+} from "../../../redux/counters/slice";
 import {
   lockPlay,
   unlockDrawMore,
   unlockEnough,
-} from "../../../store/unlockButtons";
-import { setTextError } from "../../../store/textErrorSlice";
-import { showErrorModal } from "../../../store/showModalsSlice";
-import { setResult } from "../../../store/resultSlice";
-import { setDeck } from "../../../store/deckSlice";
-import { setChipsBalance } from "../../../store/chipsBalanceSlice";
-import { setPossibleBlackjack } from "../../../store/possibleBlackjackSlice";
+} from "../../../redux/buttons/slice";
+import { setTextError } from "../../../redux/errorText/slice";
+import { showErrorModal } from "../../../redux/modals/slice";
+import { setDeck } from "../../../redux/deck/slice";
+import { setChipsBalance } from "../../../redux/chipsBalance/slice";
+import { setPossibleBlackjack } from "../../../redux/possibleBlackjack/slice";
 
 const PlayButton: React.FC<{
   setShowResultModal: (arg: boolean) => void;
@@ -80,12 +82,12 @@ const PlayButton: React.FC<{
             dispatch(setChipsBalance(chipsBalance - chosenBetOption));
             leftLowerCardRef.current = drawRandomCard(deck);
             const deckAfterDrawing1 = deck.filter(
-              (el) => el !== leftLowerCardRef.current
+              (el: ICard) => el !== leftLowerCardRef.current
             );
             dispatch(addLeftLowerCard(leftLowerCardRef.current));
             rightLowerCardRef.current = drawRandomCard(deckAfterDrawing1);
             const deckAfterDrawing2 = deckAfterDrawing1.filter(
-              (el) => el !== rightLowerCardRef.current
+              (el: ICard) => el !== rightLowerCardRef.current
             );
             dispatch(generateRightLowerCard(rightLowerCardRef.current));
             rightUpperCardRef.current = drawRandomCard(deckAfterDrawing2);

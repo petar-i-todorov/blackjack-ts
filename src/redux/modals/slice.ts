@@ -1,10 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface IModals {
-  rulesModal: boolean;
-  resultModal: boolean;
-  errorModal: boolean;
-}
+import IModals from "./types";
 
 const initialState: IModals = {
   rulesModal: false,

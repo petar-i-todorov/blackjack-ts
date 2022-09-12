@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ICard } from "../classes/CardClass";
-
-interface ICounter {
-  counterUpper: number;
-  counterLower: number;
-}
+import { ICard } from "../../classes/CardClass";
+import ICounter from "./types";
 
 const initialState: ICounter = {
   counterLower: 0,

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ICard } from "../classes/CardClass";
-import freshDeck from "../utils/deck";
+import { ICard } from "../../classes/CardClass";
+import freshDeck from "../../utils/deck";
 
 const initialState: ICard[] = freshDeck();
 

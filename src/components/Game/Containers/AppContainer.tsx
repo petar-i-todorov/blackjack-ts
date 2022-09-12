@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
-import { setResult } from "../../../store/resultSlice";
+import { setResult } from "../../../redux/result/slice";
 import ShowRulesModalButton from "../Buttons/ShowRulesModalButton";
 import ChipsBalanceComponent from "../ChipsBalanceComponent";
 import ErrorModal from "../Modals/ErrorModal";

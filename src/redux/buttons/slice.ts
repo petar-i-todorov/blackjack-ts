@@ -1,10 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-interface IUnlockButtons {
-  unlockPlay: boolean;
-  unlockEnough: boolean;
-  unlockDrawMore: boolean;
-}
+import IUnlockButtons from "./types";
 
 const initialState: IUnlockButtons = {
   unlockPlay: true,

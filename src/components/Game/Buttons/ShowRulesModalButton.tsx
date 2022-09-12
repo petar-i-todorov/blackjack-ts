@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch } from "../../../hooks/reduxHooks";
-import { showRulesModal } from "../../../store/showModalsSlice";
+import { showRulesModal } from "../../../redux/modals/slice";
 
 const ShowRulesModalButton = () => {
   const dispatch = useAppDispatch();

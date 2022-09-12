@@ -4,7 +4,7 @@ import {
   choose100,
   choose250,
   choose50,
-} from "../../../store/bettingOptionsSlice";
+} from "../../../redux/bettingOptions/slice";
 import BetOption from "../BetOption";
 
 const BetOptionsContainer = () => {
