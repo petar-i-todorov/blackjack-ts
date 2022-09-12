@@ -21,6 +21,7 @@ import { showErrorModal } from "../../../redux/modals/slice";
 import { setDeck } from "../../../redux/deck/slice";
 import { setChipsBalance } from "../../../redux/chipsBalance/slice";
 import { setPossibleBlackjack } from "../../../redux/possibleBlackjack/slice";
+import "./Button.scss";
 
 const PlayButton: React.FC<{
   setShowResultModal: (arg: boolean) => void;

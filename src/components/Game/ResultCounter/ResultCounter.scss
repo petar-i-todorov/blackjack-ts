@@ -1,0 +1,16 @@
+.sidebar__result-counter {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 135px;
+  border-radius: 8px;
+  &:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+.sidebar__play-button + .sidebar__result-counter {
+  margin-top: 10px;
+}

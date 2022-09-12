@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector } from "../../../hooks/reduxHooks";
-import CardComponent from "../CardComponent";
+import CardComponent from "../Card/CardComponent";
 
 const RightLowerCell = () => {
   const rightLowerCard = useAppSelector((state) => state.cells.rightLowerCard);

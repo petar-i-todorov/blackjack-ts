@@ -1,0 +1,39 @@
+.chips-balance {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 150px;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  background-color: white;
+
+  .chips-balance__add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 0px 8px 8px 0px;
+    padding: 5px;
+    font-weight: bolder;
+    border-left: 1px solid black;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: orangered;
+    }
+  }
+
+  .chips-balance__value {
+    font-size: 22px;
+  }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import { ICard } from "../../../classes/CardClass";
 import { useAppSelector } from "../../../hooks/reduxHooks";
-import CardComponent from "../CardComponent";
+import CardComponent from "../Card/CardComponent";
+import "./Cell.scss";
 
 const LeftLowerCell = () => {
   const leftLowerCards = useAppSelector((state) => state.cells.leftLowerCards);

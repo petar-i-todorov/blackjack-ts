@@ -1,5 +1,5 @@
-import "./App.css";
-import AppContainer from "./components/Game/Containers/AppContainer";
+import "./scss/App.scss";
+import AppContainer from "./components/Game/Containers/AppContainer/AppContainer";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import ButtonsContainer from "./ButtonsContainer";
-import LowerCellsContainer from "../Cells/LowerCellsContainer";
-import UpperCellsContainer from "../Cells/UpperCellsContainer";
+import ButtonsContainer from "./ButtonsContainer/ButtonsContainer";
+import LowerCellsContainer from "../Cells/CellsContainers/LowerCellsContainer";
+import UpperCellsContainer from "../Cells/CellsContainers/UpperCellsContainer";
 
 const CellsAndButtonsContainer: React.FC<{
   setShowResultModal: (arg: boolean) => void;

@@ -1,0 +1,48 @@
+.card {
+  height: 280px;
+  width: 192px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+
+  .card__upper,
+  .card__lower {
+    font-size: 30px;
+  }
+
+  .card__upper {
+    align-self: flex-start;
+  }
+
+  .card__lower {
+    align-self: flex-end;
+    transform: rotate(-180deg);
+  }
+
+  .card__suit {
+    font-size: 120px;
+  }
+}
+
+$elements: 10;
+@for $i from 1 to $elements {
+  .stacking:nth-child(#{$i + 1}) {
+    position: absolute;
+    right: $i * 120px;
+    top: 0px;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}

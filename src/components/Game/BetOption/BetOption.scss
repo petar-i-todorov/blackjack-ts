@@ -1,0 +1,33 @@
+.bet-options-container {
+  .bet-option {
+    width: 100%;
+    border-radius: 8px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 0 5px 0 orangered;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  .button-option-active {
+    background-color: orangered;
+    border: 1px solid orange;
+    box-shadow: none;
+  }
+}

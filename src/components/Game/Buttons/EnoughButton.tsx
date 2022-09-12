@@ -7,6 +7,7 @@ import { setDeck } from "../../../redux/deck/slice";
 import { setResult } from "../../../redux/result/slice";
 import { showErrorModal } from "../../../redux/modals/slice";
 import { setTextError } from "../../../redux/errorText/slice";
+import "./Button.scss";
 
 const EnoughButton: React.FC<{
   setShowResultModal: (arg: boolean) => void;

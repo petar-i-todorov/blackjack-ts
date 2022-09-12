@@ -6,6 +6,7 @@ import { setDeck } from "../../../redux/deck/slice";
 import { showErrorModal } from "../../../redux/modals/slice";
 import { setTextError } from "../../../redux/errorText/slice";
 import { ICard } from "../../../classes/CardClass";
+import "./Button.scss";
 
 const DrawMoreButton = () => {
   const dispatch = useAppDispatch();
