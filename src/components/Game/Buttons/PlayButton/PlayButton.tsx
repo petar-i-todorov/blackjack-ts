@@ -1,27 +1,28 @@
 import React, { useRef } from "react";
-import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "../../../../hooks/reduxHooks";
 import {
   addLeftLowerCard,
   generateRightLowerCard,
   generateRightUpperCard,
-} from "../../../redux/cells/slice";
+} from "../../../../redux/cells/slice";
 import { useEffect } from "react";
-import { ICard } from "../../../classes/CardClass";
+import { ICard } from "../../../../classes/CardClass";
 import {
   setCounterLower,
   setCounterUpper,
-} from "../../../redux/counters/slice";
+} from "../../../../redux/counters/slice";
 import {
   lockPlay,
   unlockDrawMore,
   unlockEnough,
-} from "../../../redux/buttons/slice";
-import { setTextError } from "../../../redux/errorText/slice";
-import { showErrorModal } from "../../../redux/modals/slice";
-import { setDeck } from "../../../redux/deck/slice";
-import { setChipsBalance } from "../../../redux/chipsBalance/slice";
-import { setPossibleBlackjack } from "../../../redux/possibleBlackjack/slice";
-import "./Button.scss";
+} from "../../../../redux/buttons/slice";
+import { setTextError } from "../../../../redux/errorText/slice";
+import { showErrorModal } from "../../../../redux/modals/slice";
+import { setDeck } from "../../../../redux/deck/slice";
+import { setChipsBalance } from "../../../../redux/chipsBalance/slice";
+import { setPossibleBlackjack } from "../../../../redux/possibleBlackjack/slice";
+import "../Button.scss";
+import "./PlayButton.scss";
 
 const PlayButton: React.FC<{
   setShowResultModal: (arg: boolean) => void;

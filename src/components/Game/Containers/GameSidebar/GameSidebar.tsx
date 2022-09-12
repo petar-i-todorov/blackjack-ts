@@ -1,7 +1,7 @@
 import React from "react";
 import ResultCounter from "../../ResultCounter/ResultCounter";
 import DeckComponent from "../../Deck/DeckComponent";
-import PlayButton from "../../Buttons/PlayButton";
+import PlayButton from "../../Buttons/PlayButton/PlayButton";
 import "./GameSidebar.scss";
 
 const GameSidebar: React.FC<{
