@@ -5,4 +5,9 @@
   margin: auto;
   width: 596px;
   height: 630px;
+  @media (max-width: 992px) {
+    width: 400px;
+    height: 470px;
+    gap: 5px;
+  }
 }

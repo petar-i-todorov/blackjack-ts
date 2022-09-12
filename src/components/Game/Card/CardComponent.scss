@@ -11,9 +11,19 @@
   padding: 10px;
   border: 1px solid #000;
 
+  @media (max-width: 992px) {
+    width: 130px;
+    height: 202.5px;
+    padding: 5px;
+    border: 0.1px solid gray;
+  }
+
   .card__upper,
   .card__lower {
     font-size: 30px;
+    @media (max-width: 992px) {
+      font-size: 20px;
+    }
   }
 
   .card__upper {
@@ -27,6 +37,9 @@
 
   .card__suit {
     font-size: 120px;
+    @media (max-width: 992px) {
+      font-size: 90px;
+    }
   }
 }
 
@@ -36,6 +49,11 @@ $elements: 10;
     position: absolute;
     right: $i * 120px;
     top: 0px;
+    @media (max-width: 992px) {
+      position: absolute;
+      right: $i * 65px;
+      top: 0px;
+    }
   }
 }
 

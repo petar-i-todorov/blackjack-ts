@@ -1,4 +1,7 @@
 .buttons-container {
   display: flex;
   gap: 10px;
+  @media (max-width: 992px) {
+    gap: 5px;
+  }
 }

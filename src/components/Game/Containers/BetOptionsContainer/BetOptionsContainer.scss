@@ -4,4 +4,8 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  @media (max-width: 992px) {
+    gap: 5px;
+    margin-top: 5px;
+  }
 }

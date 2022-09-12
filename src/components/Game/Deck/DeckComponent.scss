@@ -5,4 +5,11 @@
   background-size: contain;
   border-radius: 8px;
   margin-bottom: 10px;
+  @media (max-width: 992px) {
+    width: 130px;
+    margin-bottom: 5px;
+    height: 202.5px;
+    background-image: url("../../../assets/card-back-992px.png");
+    background-size: cover;
+  }
 }

@@ -5,4 +5,8 @@
   box-sizing: border-box;
   background-color: lightgray;
   position: relative;
+  @media (max-width: 992px) {
+    width: 130px;
+    height: 202.5px;
+  }
 }

@@ -18,10 +18,26 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    @media (max-width: 992px) {
+      width: 400px;
+      height: 400px;
+    }
   }
   .modal-result__window {
     width: 500px;
     height: 150px;
+    @media (max-width: 992px) {
+      width: 300px;
+      height: 120px;
+    }
+  }
+
+  .modal__window__text {
+    h1 {
+      @media (max-width: 992px) {
+        font-size: 22px;
+      }
+    }
   }
 
   .modal__blank {
