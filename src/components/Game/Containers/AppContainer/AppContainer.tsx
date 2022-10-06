@@ -10,14 +10,11 @@ import GameContainer from "../GameContainer/GameContainer";
 import "./AppContainer.scss";
 
 export default function AppContainer() {
-  const showRulesModal = useAppSelector((state) => state.modal.rulesModal);
   const dispatch = useAppDispatch();
 
   const { counterUpper, counterLower } = useAppSelector(
     (state) => state.counter
   );
-
-  const showErrorModal = useAppSelector((state) => state.modal.errorModal);
 
   const checkIfOver21 = () => {
     if (counterUpper > 21) {
@@ -36,8 +33,6 @@ export default function AppContainer() {
       <ChipsBalanceComponent />
       <GameContainer />
       <ShowRulesModalButton />
-      {showRulesModal && <RulesModal />}
-      {showErrorModal && <ErrorModal />}
     </div>
   );
 }

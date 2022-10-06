@@ -7,6 +7,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  @media (max-width: 850px) {
+    width: 850px;
+  }
   .modal__window {
     width: 500px;
     height: 500px;
@@ -48,5 +51,8 @@
     opacity: 0.5;
     width: 100vw;
     height: 100vh;
+    @media (max-width: 850px) {
+      width: 100%;
+    }
   }
 }
