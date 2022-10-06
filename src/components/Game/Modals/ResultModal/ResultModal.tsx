@@ -16,11 +16,11 @@ import { setDeck } from "../../../../redux/deck/slice";
 import freshDeck from "../../../../utils/deck";
 import { setPossibleBlackjack } from "../../../../redux/possibleBlackjack/slice";
 import "./ResultModal.scss";
+import { showResultModal } from "../../../../redux/modals/slice";
 
-const ResultModal: React.FC<{
-  showResultModal: boolean;
-  setShowResultModal: (arg: boolean) => void;
-}> = ({ showResultModal, setShowResultModal }) => {
+const ResultModal = () => {
+  const resultModal = useAppSelector((state) => state.modal.resultModal);
+
   const dispatch = useAppDispatch();
 
   const resetTable = () => {
@@ -56,7 +56,7 @@ const ResultModal: React.FC<{
     resultText = `BLACKJACK! YOU WIN ${chosenBetOption * 3}`;
   else resultText = "BLACKJACK! YOU LOSE";
   useEffect(() => {
-    if (showResultModal === true) {
+    if (resultModal === true) {
       if (result === "WIN") {
         dispatch(setChipsBalance(chipsBalance + chosenBetOption * 2));
       } else if (result === "WIN-BLACKJACK") {
@@ -65,12 +65,12 @@ const ResultModal: React.FC<{
         dispatch(setChipsBalance(chipsBalance + chosenBetOption));
       }
     }
-  }, [showResultModal]);
+  }, [resultModal]);
   return (
     <div
-      className={`overlay ${showResultModal ? "show" : ""}`}
+      className={`overlay ${resultModal ? "show" : ""}`}
       onClick={() => {
-        setShowResultModal(false);
+        dispatch(showResultModal(false));
         resetTable();
         dispatch(unlockPlay());
         dispatch(lockDrawMore());
@@ -79,7 +79,7 @@ const ResultModal: React.FC<{
       }}
     >
       <div
-        className={`modal-v2 ${showResultModal ? "show" : ""}`}
+        className={`modal-v2 ${resultModal ? "show" : ""}`}
         onClick={(event) => {
           event.stopPropagation();
         }}
@@ -171,7 +171,7 @@ const ResultModal: React.FC<{
         <button
           className="button modal__button"
           onClick={() => {
-            setShowResultModal(false);
+            dispatch(showResultModal(false));
             resetTable();
             dispatch(unlockPlay());
             dispatch(lockDrawMore());

@@ -4,14 +4,12 @@ import DeckComponent from "../../Deck/DeckComponent";
 import PlayButton from "../../Buttons/PlayButton/PlayButton";
 import "./GameSidebar.scss";
 
-const GameSidebar: React.FC<{
-  setShowResultModal: (arg: boolean) => void;
-}> = ({ setShowResultModal }) => {
+const GameSidebar = () => {
   return (
     <div className="game__sidebar">
       <ResultCounter side="upper" />
       <DeckComponent />
-      <PlayButton setShowResultModal={setShowResultModal} />
+      <PlayButton />
       <ResultCounter side="lower" />
     </div>
   );

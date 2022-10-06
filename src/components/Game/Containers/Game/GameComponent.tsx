@@ -3,13 +3,11 @@ import CellsAndButtonsContainer from "../CellsAndButtonsContainer";
 import GameSidebar from "../GameSidebar/GameSidebar";
 import "./GameComponent.scss";
 
-const GameComponent: React.FC<{
-  setShowResultModal: (arg: boolean) => void;
-}> = ({ setShowResultModal }) => {
+const GameComponent = () => {
   return (
     <div className="game">
-      <CellsAndButtonsContainer setShowResultModal={setShowResultModal} />
-      <GameSidebar setShowResultModal={setShowResultModal} />
+      <CellsAndButtonsContainer />
+      <GameSidebar />
     </div>
   );
 };

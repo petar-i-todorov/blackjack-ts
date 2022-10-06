@@ -5,13 +5,11 @@ import { addLeftUpperCard } from "../../../redux/cells/slice";
 import { CounterAction } from "../../../redux/counters/slice";
 import { setDeck } from "../../../redux/deck/slice";
 import { setResult } from "../../../redux/result/slice";
-import { showErrorModal } from "../../../redux/modals/slice";
+import { showErrorModal, showResultModal } from "../../../redux/modals/slice";
 import { setTextError } from "../../../redux/errorText/slice";
 import "./Button.scss";
 
-const EnoughButton: React.FC<{
-  setShowResultModal: (arg: boolean) => void;
-}> = ({ setShowResultModal }) => {
+const EnoughButton = () => {
   const dispatch = useAppDispatch();
 
   const enoughState = useAppSelector(
@@ -100,11 +98,11 @@ const EnoughButton: React.FC<{
                 rightUpperCardRef.value === 10)
             ) {
               dispatch(setResult("DRAW"));
-              setShowResultModal(true);
+              dispatch(showResultModal(true));
               return;
             } else {
               dispatch(setResult("WIN-BLACKJACK"));
-              setShowResultModal(true);
+              dispatch(showResultModal(true));
               return;
             }
           } else if (
@@ -116,7 +114,7 @@ const EnoughButton: React.FC<{
               rightUpperCardRef.value === 10)
           ) {
             dispatch(setResult("LOSE-BLACKJACK"));
-            setShowResultModal(true);
+            dispatch(showResultModal(true));
             return;
           }
         }
@@ -128,10 +126,10 @@ const EnoughButton: React.FC<{
           } else if (counterUpperRef === counterLower) {
             dispatch(setResult("DRAW"));
           }
-          setShowResultModal(true);
+          dispatch(showResultModal(true));
         }
       } else {
-        setShowResultModal(true);
+        dispatch(showResultModal(true));
         if (counterUpper > counterLower) {
           dispatch(setResult("LOSE"));
         } else if (counterUpper < counterLower) {

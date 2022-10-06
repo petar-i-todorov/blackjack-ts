@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/reduxHooks";
+import { showResultModal } from "../../../../redux/modals/slice";
 import { setResult } from "../../../../redux/result/slice";
 import ShowRulesModalButton from "../../Buttons/RulesButton/ShowRulesModalButton";
 import ChipsBalanceComponent from "../../ChipsBalance/ChipsBalanceComponent";
 import ErrorModal from "../../Modals/ErrorModal/ErrorModal";
-import ResultModal from "../../Modals/ResultModal/ResultModal";
 import RulesModal from "../../Modals/RulesModal/RulesModal";
 import GameContainer from "../GameContainer/GameContainer";
 import "./AppContainer.scss";
 
 export default function AppContainer() {
-  const [showResultModal, setShowResultModal] = useState(false);
   const showRulesModal = useAppSelector((state) => state.modal.rulesModal);
   const dispatch = useAppDispatch();
 
@@ -23,10 +22,10 @@ export default function AppContainer() {
   const checkIfOver21 = () => {
     if (counterUpper > 21) {
       dispatch(setResult("WIN"));
-      setShowResultModal(true);
+      dispatch(showResultModal(true));
     } else if (counterLower > 21) {
       dispatch(setResult("LOSE"));
-      setShowResultModal(true);
+      dispatch(showResultModal(true));
     }
   };
   useEffect(() => {
@@ -35,13 +34,9 @@ export default function AppContainer() {
   return (
     <div className="app-container">
       <ChipsBalanceComponent />
-      <GameContainer setShowResultModal={setShowResultModal} />
+      <GameContainer />
       <ShowRulesModalButton />
       {showRulesModal && <RulesModal />}
-      <ResultModal
-        showResultModal={showResultModal}
-        setShowResultModal={setShowResultModal}
-      />
       {showErrorModal && <ErrorModal />}
     </div>
   );

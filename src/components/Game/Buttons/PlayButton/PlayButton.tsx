@@ -24,9 +24,7 @@ import { setPossibleBlackjack } from "../../../../redux/possibleBlackjack/slice"
 import "../Button.scss";
 import "./PlayButton.scss";
 
-const PlayButton: React.FC<{
-  setShowResultModal: (arg: boolean) => void;
-}> = ({ setShowResultModal }) => {
+const PlayButton = () => {
   const dispatch = useAppDispatch();
 
   const { leftLowerCards, leftUpperCards, rightUpperCard, rightLowerCard } =
