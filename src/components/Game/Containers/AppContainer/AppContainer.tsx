@@ -10,7 +10,6 @@ import GameContainer from "../GameContainer/GameContainer";
 import "./AppContainer.scss";
 
 export default function AppContainer() {
-  const [showResultModal, setShowResultModal] = useState(false);
   const showRulesModal = useAppSelector((state) => state.modal.rulesModal);
   const dispatch = useAppDispatch();
 
@@ -38,10 +37,6 @@ export default function AppContainer() {
       <GameContainer setShowResultModal={setShowResultModal} />
       <ShowRulesModalButton />
       {showRulesModal && <RulesModal />}
-      <ResultModal
-        showResultModal={showResultModal}
-        setShowResultModal={setShowResultModal}
-      />
       {showErrorModal && <ErrorModal />}
     </div>
   );
